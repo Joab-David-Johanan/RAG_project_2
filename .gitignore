@@ -3,3 +3,11 @@ venv/
 .env
 
 .vscode/
+
+rag_app.egg-info
+
+# Python bytecode
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
