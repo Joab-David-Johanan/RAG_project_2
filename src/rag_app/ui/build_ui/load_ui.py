@@ -1,7 +1,8 @@
 import base64
 import streamlit as st
 from pathlib import Path
-from rag_app.ui.read_ui_config import Config
+#from rag_app.ui.read_config.read_from_ini import Config
+from rag_app.ui.read_config.read_from_toml import Config
 
 
 # ─────────────────────────────────────────────────────────────
@@ -128,3 +129,8 @@ class LoadStreamlitUI:
             )
 
         return self.user_controls
+
+
+if __name__=="__main__":
+    obj=LoadStreamlitUI()
+    print(obj.load_streamlit_ui())

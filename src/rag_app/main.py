@@ -1,5 +1,5 @@
 import streamlit as st
-from rag_app.ui.streamlit_ui.load_ui import LoadStreamlitUI
+from rag_app.ui.build_ui.load_ui import LoadStreamlitUI
 
 def load_app():
     """

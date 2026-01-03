@@ -1,7 +1,12 @@
+from pathlib import Path
 from configparser import ConfigParser
 
+PROJECT_ROOT = Path(__file__).resolve().parents[4]
+CONFIG_FILE = PROJECT_ROOT / "src" / "rag_app" / "ui" / "config" /"uiconfig.ini"
+
+
 class Config:
-    def __init__(self, config_file=r'src\rag_app\ui\uiconfig.ini'):
+    def __init__(self, config_file=CONFIG_FILE):
         """
         Docstring for __init__
         
@@ -62,4 +67,9 @@ class Config:
     
     def get_chat_title(self):
         return self.config["DEFAULT"].get("CHAT_TITLE")
-    
+
+
+if __name__=='__main__':
+    obj=Config()
+    print(obj.get_groq_model_options())
+    print(obj.get_usecase_options())

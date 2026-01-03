@@ -13,7 +13,9 @@ mkdir -p tests
 mkdir -p src
 mkdir -p src/rag_app
 mkdir -p src/rag_app/ui
-mkdir -p src/rag_app/ui/streamlit_ui
+mkdir -p src/rag_app/ui/build_ui
+mkdir -p src/rag_app/ui/config
+mkdir -p src/rag_app/ui/read_config
 mkdir -p src/rag_app/config
 mkdir -p src/rag_app/document_ingestion
 mkdir -p src/rag_app/vectorstore
@@ -46,10 +48,12 @@ touch src/rag_app/nodes/__init__.py
 touch src/rag_app/graph_builder/__init__.py
 
 # subpackage files
-touch src/rag_app/ui/uiconfig.ini
-touch src/rag_app/ui/read_ui_config.py
-touch src/rag_app/ui/streamlit_ui/load_ui.py
-touch src/rag_app/ui/streamlit_ui/display_result.py
+touch src/rag_app/ui/config/uiconfig.ini
+touch src/rag_app/ui/config/ui_config.toml
+touch src/rag_app/ui/read_config/read_from_ini.py
+touch src/rag_app/ui/read_config/read_from_toml.py
+touch src/rag_app/ui/build_ui/load_ui.py
+touch src/rag_app/ui/build_ui/display_result.py
 
 # tests
 touch tests/__init__.py

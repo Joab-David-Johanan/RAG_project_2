@@ -1,0 +1,12 @@
+[ui]
+page_title= "AI Chatbot"
+chat_title= "AI powered chatbot built using LangGraph"
+
+[ui.options]
+llm_options= ["Groq", "OpenAI"]
+usecase_options = ["Basic Chatbot", "Chatbot with tool", "AI news", "Blog Generator", "AI Counsel"]
+
+[models]
+groq_model_options = ["groq/compound-mini", "llama-3.1-8b-instant", "meta-llama/llama-guard-4-12b"]
+openai_model_options = ["gpt-4o-2024-08-06", "gpt-5-mini-2025-08-07", "gpt-5-nano-2025-08-07"]
+
