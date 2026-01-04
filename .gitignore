@@ -6,6 +6,8 @@ venv/
 
 rag_app.egg-info
 
+.coverage
+
 # Python bytecode
 __pycache__/
 *.pyc

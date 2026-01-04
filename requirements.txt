@@ -8,3 +8,8 @@ faiss-cpu
 streamlit
 tavily-python
 pydantic
+
+# testing
+pytest 
+pytest-mock 
+pytest-cov
