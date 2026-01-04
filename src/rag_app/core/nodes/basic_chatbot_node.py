@@ -1,4 +1,4 @@
-from rag_app.state.basic_chatbot_state import BasicChatbotState
+from rag_app.core.state.basic_chatbot_state import BasicChatbotState
 
 class BasicChatbotNode:
     """

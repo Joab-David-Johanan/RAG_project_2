@@ -1,6 +1,6 @@
 from langgraph.graph import StateGraph, START, END
-from rag_app.state.basic_chatbot_state import BasicChatbotState
-from rag_app.nodes.basic_chatbot_node import BasicChatbotNode
+from rag_app.core.state.basic_chatbot_state import BasicChatbotState
+from rag_app.core.nodes.basic_chatbot_node import BasicChatbotNode
 
 
 class BuildGraph:

@@ -24,17 +24,17 @@ EOF
 # -------------------------------
 find . \
   -type d \
-  ! -path "./.git*" \
-  ! -path "./.venv*" \
-  ! -path "./venv*" \
-  ! -path "./env*" \
-  ! -path "./.env/*" \
-  ! -path "./__pycache__*" \
-  ! -path "./data/assets*" \
-  ! -path "./data/pdfs*" \
-  ! -path "./data/texts*" \
-  ! -path "./scripts*" \
-  ! -path "./.streamlit*" \
+  ! -path "*/.git*" \
+  ! -path "*/.venv*" \
+  ! -path "*/venv*" \
+  ! -path "*/env*" \
+  ! -path "*/.env/*" \
+  ! -path "*/__pycache__*" \
+  ! -path "*/data/assets*" \
+  ! -path "*/data/pdfs*" \
+  ! -path "*/data/texts*" \
+  ! -path "*/scripts*" \
+  ! -path "*/.streamlit*" \
 | sed 's|^\./||' \
 | sort \
 | awk '{print "mkdir -p " $0}' >> ${OUTPUT_FILE}
@@ -52,13 +52,13 @@ EOF
 find . \
   -type f \
   \( -name "__init__.py" -o -name "*.py" -o -name "*.toml" -o -name "*.ini" \) \
-  ! -path "./.git*" \
-  ! -path "./.venv*" \
-  ! -path "./venv*" \
-  ! -path "./env*" \
-  ! -path "./.env/*" \
-  ! -path "./__pycache__*" \
-  ! -path "./scripts*" \
+  ! -path "*/.git*" \
+  ! -path "*/.venv*" \
+  ! -path "*/venv*" \
+  ! -path "*/env*" \
+  ! -path "*/.env/*" \
+  ! -path "*/__pycache__*" \
+  ! -path "*/scripts*" \
 | sed 's|^\./||' \
 | sort \
 | awk '{print "touch " $0}' >> ${OUTPUT_FILE}

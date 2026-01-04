@@ -24,37 +24,6 @@ def img_to_base64(path: Path) -> str:
 
 IMG_B64 = img_to_base64(ROBOT_IMG)
 
-# ─────────────────────────────────────────────────────────────
-# Utilities
-# ─────────────────────────────────────────────────────────────
-
-def apply_theme(theme: str):
-    if theme == "Dark":
-        st.markdown(
-            """
-            <style>
-            .stApp {
-                background-color: #0e1117;
-                color: #fafafa;
-            }
-            </style>
-            """,
-            unsafe_allow_html=True
-        )
-    else:
-        st.markdown(
-            """
-            <style>
-            .stApp {
-                background-color: #ffffff;
-                color: #262730;
-            }
-            </style>
-            """,
-            unsafe_allow_html=True
-        )
-
-
 
 # ─────────────────────────────────────────────────────────────
 # UI Loader
@@ -72,12 +41,6 @@ class BuildSidebar:
             layout="wide"
         )
 
-        # ─── Theme state ──────────────────────────────────────
-        if "theme" not in st.session_state:
-            st.session_state.theme = "Light"
-
-        apply_theme(st.session_state.theme)
-
         # ─── Header ──────────────────────────────────────────
         st.markdown(
             f"""
@@ -91,16 +54,6 @@ class BuildSidebar:
 
         # ─── Sidebar ─────────────────────────────────────────
         with st.sidebar:
-
-            self.user_controls["theme"] = st.radio(
-                "Theme",
-                ["Light", "Dark"],
-                horizontal=True,
-                index=0 if st.session_state.theme == "Light" else 1
-            )
-
-            st.session_state.theme = self.user_controls["theme"]
-            apply_theme(st.session_state.theme)
 
             llm_options = self.config.get_llm_options()
             usecase_options = self.config.get_usecase_options()
