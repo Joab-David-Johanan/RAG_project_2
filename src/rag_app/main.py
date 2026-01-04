@@ -1,4 +1,4 @@
-from rag_app.controller.app_controller import AppController
+from rag_app.app.app_controller import AppController
 
 
 def load_app():

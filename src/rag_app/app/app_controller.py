@@ -1,7 +1,7 @@
 import streamlit as st
-from rag_app.controller.ui_controller import UIController
-from rag_app.controller.graph_controller import GraphController
-from rag_app.controller.output_controller import OutputController
+from rag_app.app.ui_controller import UIController
+from rag_app.app.graph_controller import GraphController
+from rag_app.app.output_controller import OutputController
 
 
 class AppController:
