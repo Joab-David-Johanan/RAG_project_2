@@ -8,6 +8,8 @@ rag_app.egg-info
 
 .coverage
 
+rag_app.code-workspace
+
 # Python bytecode
 __pycache__/
 *.pyc

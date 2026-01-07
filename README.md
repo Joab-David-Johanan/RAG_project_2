@@ -1,4 +1,4 @@
-## End to End Chatbot with Streamlit
+## End to End Agentic RAG Chatbot
 
 ### Project Structure
 
