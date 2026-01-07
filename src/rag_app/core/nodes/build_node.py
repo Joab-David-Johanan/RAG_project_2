@@ -1,6 +1,6 @@
 from rag_app.core.schema.basic_chatbot_state import BasicChatbotState
 
-class BasicChatbotNode:
+class BuildNodes:
     """
     As soon as initialize the Node class the following should happen,
     1. Model should get loaded
@@ -10,7 +10,7 @@ class BasicChatbotNode:
     def __init__(self, model):
         self.llm=model
     
-    def process(self,state:BasicChatbotState)->dict:
+    def basic_chat(self,state:BasicChatbotState)->dict:
         """
         Process the input state and generate a chat response
         """

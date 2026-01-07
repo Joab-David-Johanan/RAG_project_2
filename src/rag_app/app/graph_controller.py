@@ -1,6 +1,6 @@
 import streamlit as st
 from rag_app.llms.route_correct_llm import RouteLLM
-from rag_app.core.graph.basic_chatbot_graph import BuildGraph
+from rag_app.core.graph.build_graph import BuildGraph
 
 
 class GraphController:

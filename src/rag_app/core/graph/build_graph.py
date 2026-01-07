@@ -1,6 +1,6 @@
 from langgraph.graph import StateGraph, START, END
 from rag_app.core.schema.basic_chatbot_state import BasicChatbotState
-from rag_app.core.nodes.basic_chatbot_node import BasicChatbotNode
+from rag_app.core.nodes.build_node import BuildNodes
 
 
 class BuildGraph:
@@ -15,9 +15,9 @@ class BuildGraph:
 
     def build_basic_chatbot_graph(self):
 
-        self.basic_chatbot_node = BasicChatbotNode(self.llm)
+        self.basic_chatbot_node = BuildNodes(self.llm)
 
-        self.graph_builder.add_node("chatbot", self.basic_chatbot_node.process)
+        self.graph_builder.add_node("chatbot", self.basic_chatbot_node.basic_chat)
         self.graph_builder.add_edge(START, "chatbot")
         self.graph_builder.add_edge("chatbot", END)
     
