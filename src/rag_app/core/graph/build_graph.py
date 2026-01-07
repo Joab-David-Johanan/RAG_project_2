@@ -1,5 +1,5 @@
 from langgraph.graph import StateGraph, START, END
-from rag_app.core.schema.basic_chatbot_state import BasicChatbotState
+from rag_app.core.schema.build_state import BasicChatbotState
 from rag_app.core.nodes.build_node import BuildNodes
 
 
