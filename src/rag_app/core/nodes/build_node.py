@@ -1,4 +1,4 @@
-from rag_app.core.schema.basic_chatbot_state import BasicChatbotState
+from rag_app.core.schema.build_state import BasicChatbotState
 
 class BuildNodes:
     """
