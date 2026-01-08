@@ -10,8 +10,6 @@ class BuildNodes:
     def __init__(self, model):
         self.llm=model
     
-    def basic_chat(self,state:BasicChatbotState)->dict:
-        """
-        Process the input state and generate a chat response
-        """
-        return {"messages":self.llm.invoke(state["messages"])}
+    def basic_chat(self, state: BasicChatbotState) -> dict:
+        ai_msg = self.llm.invoke(state["messages"])
+        return {"messages": [ai_msg]}

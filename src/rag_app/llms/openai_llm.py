@@ -12,7 +12,7 @@ class OpenAILLM:
 
     def get_llm_model(self):
         try:
-            selected_openai_model = self.user_input["selected_openai_model"]
+            selected_openai_model = self.user_input["selected_model"]
 
             if not os.getenv("OPENAI_API_KEY"):
                 st.error("Please set the OPENAI_API_KEY")

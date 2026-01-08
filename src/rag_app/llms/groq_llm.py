@@ -13,7 +13,7 @@ class GroqLLM:
 
     def get_llm_model(self):
         try:
-            selected_groq_model = self.user_input["selected_groq_model"]
+            selected_groq_model = self.user_input["selected_model"]
 
             # Validate API key
             if not os.getenv("GROQ_API_KEY"):
