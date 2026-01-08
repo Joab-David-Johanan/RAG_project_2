@@ -17,5 +17,12 @@ class AppController:
             st.error("Failed to load user input")
             return
 
-        graph = self.graph_controller.get_graph(user_input)
-        self.output_controller.render(user_input, graph)
+        elif user_input=='Basic Chatbot':
+
+            graph = self.graph_controller.get_graph(user_input)
+            self.output_controller.render(user_input, graph)
+        
+        elif user_input=='RAG Chatbot':
+
+            graph = self.graph_controller.get_graph(user_input)
+            
