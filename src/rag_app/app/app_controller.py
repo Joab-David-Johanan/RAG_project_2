@@ -12,17 +12,15 @@ class AppController:
 
     def run(self):
         user_input = self.ui_controller.get_user_input()
-
         if not user_input:
-            st.error("Failed to load user input")
             return
 
-        elif user_input=='Basic Chatbot':
+        usecase = user_input.get("selected_usecase")
+        if not usecase:
+            return
 
-            graph = self.graph_controller.get_graph(user_input)
-            self.output_controller.render(user_input, graph)
-        
-        elif user_input=='RAG Chatbot':
+        graph = self.graph_controller.get_graph(user_input)
+        if graph is None:
+            return
 
-            graph = self.graph_controller.get_graph(user_input)
-            
+        self.output_controller.render(user_input, graph)

@@ -1,10 +1,12 @@
-from rag_app.ui.build_ui.load_conversation import BuildResultDisplay
+from rag_app.ui.chat.load_conversation import BuildResultDisplay
 
 class OutputController:
     def render(self, user_input: dict, graph):
 
-        user_message = user_input.get("user_message")
+        if graph is None:
+            return  # graph not ready yet
 
+        user_message = user_input.get("user_message")
         if not user_message:
             return
 
