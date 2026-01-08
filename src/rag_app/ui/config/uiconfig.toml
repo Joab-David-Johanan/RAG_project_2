@@ -1,10 +1,10 @@
 [ui]
-page_title= "AI Chatbot"
+page_title= "ALL IN ONE RAG CHATBOT"
 chat_title= "AI powered chatbot built using LangGraph"
 
 [ui.options]
 llm_options= ["Groq", "OpenAI"]
-usecase_options = ["Basic Chatbot", "Chatbot with tool", "AI news", "Blog Generator", "AI Counsel"]
+usecase_options = ["Basic Chatbot", "RAG Chatbot", "AI Counsel", "Multi-Modal RAG Chatbot"]
 
 [models]
 groq_model_options = ["groq/compound-mini", "llama-3.1-8b-instant", "meta-llama/llama-guard-4-12b"]
