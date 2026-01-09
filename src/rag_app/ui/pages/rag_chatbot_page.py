@@ -14,7 +14,7 @@ class RagChatbotPage:
         self.img_b64 = self._load_logo()
 
     def _load_logo(self) -> str:
-        project_root = Path(__file__).resolve().parents[5]
+        project_root = Path(__file__).resolve().parents[4]
         img_path = project_root / "data" / "assets" / "red_transformer.png"
         return base64.b64encode(img_path.read_bytes()).decode()
 

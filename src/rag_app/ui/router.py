@@ -1,8 +1,8 @@
 import streamlit as st
 from rag_app.ui.read_config.read_from_toml import Config
-from rag_app.ui.build_ui.pages.homepage import HomePage
-from rag_app.ui.build_ui.pages.basic_chatbot_page import BasicChatbotPage
-from rag_app.ui.build_ui.pages.rag_chatbot_page import RagChatbotPage
+from rag_app.ui.pages.homepage import HomePage
+from rag_app.ui.pages.basic_chatbot_page import BasicChatbotPage
+from rag_app.ui.pages.rag_chatbot_page import RagChatbotPage
 
 
 class UIRouter:
