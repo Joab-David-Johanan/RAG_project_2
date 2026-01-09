@@ -19,10 +19,7 @@ class UIRouter:
         Streamlit page configuration.
         Must be called exactly once before any UI rendering.
         """
-        st.set_page_config(
-            page_title=self.config.get_page_title(),
-            layout="wide"
-        )
+        st.set_page_config(page_title=self.config.get_page_title(), layout="wide")
 
     def run(self):
         """
